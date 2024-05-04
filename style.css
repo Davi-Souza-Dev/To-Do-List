@@ -1,0 +1,86 @@
+html,boy{
+    width: 98%;
+    height: 98%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+section{
+    width: 300px;
+    background-color: rgb(218, 217, 217);
+    padding: 20px;
+}
+
+section >div.menu{
+    width: 100%;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+div.menu > input{
+    width: 80%;
+    height: 45px;
+    text-indent: 10px;
+    font-size: 15px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+div.menu > button{
+    width: 50px;
+    height: 50px;
+    border: 0px;
+    border-radius: 5px;
+    background: url(imagens/mais.png), rgb(217, 255, 0);
+    background-size: 50%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    filter: invert();
+}
+
+section > ul.container-task{
+    margin-top: 30px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    padding: 0px;
+}
+
+section > ul.container-task > li.task{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    background-color: rgb(176, 176, 176);
+    border-radius: 5px;
+}
+
+li.task > p{
+    width: 100%; 
+    text-indent: 10px;
+}
+
+li.task:hover > button{
+    display: block;
+}
+li.task > button{
+    width: 50px;
+    height: 50px;
+    background: url(imagens/lixo.png), rgb(0, 221, 255);
+    background-position: center center;
+    background-size: 50% 50%;
+    background-repeat: no-repeat;
+    filter: invert();
+    border: 0;
+    border-radius: 0px 5px 5px 0px;
+    display: none;
+}

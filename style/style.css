@@ -1,0 +1,157 @@
+html,boy{
+    width: 99%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+body{
+    background: linear-gradient(-45deg, #4B84E5,#55A6DD, #54A4DD, #5BBCD7, #64DCCF);
+    background-size: 500% 500%;
+    animation: fundo 5s ease-in-out infinite alternate-reverse;
+}
+
+@keyframes fundo {
+    0%{
+        background-position: 0% 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0% 50%;
+    }
+}
+section{
+    width: 300px;
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.443);
+}
+
+section > img{
+    width: 50px;
+    margin-bottom: 20px;
+}
+
+section >div.menu{
+    width: 100%;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+div.menu > input{
+    width: 80%;
+    height: 45px;
+    text-indent: 10px;
+    font-size: 15px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+div.menu > button{
+    width: 50px;
+    height: 50px;
+    border: 0px;
+    border-radius: 5px;
+    background: url(../imagens/mais.png), rgb(217, 255, 0);
+    background-size: 50%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    filter: invert();
+}
+
+section > ul.container-task{
+    margin-top: 30px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    padding: 0px;
+}
+
+section > ul.container-task > li.task{
+    margin-top: 10px;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    background-color: #F2F2F2;
+    border-radius: 5px;
+}
+  
+
+li.task > p{
+    width: 100%; 
+    height: 100%;
+    text-indent: 10px;
+    line-height: 50px;
+}
+
+li.task:hover > button{
+    display: block;
+}
+li.task > button{
+    width: 50px;
+    height: 50px;
+    background: url(../imagens/lixo.png), rgb(0, 221, 255);
+    background-position: center center;
+    background-size: 50% 50%;
+    background-repeat: no-repeat;
+    filter: invert();
+    border: 0;
+    border-radius: 0px 5px 5px 0px;
+    display: none;
+}
+
+.done{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-decoration: line-through;
+    color:rgb(255, 255, 255);
+    font-weight: bolder;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px 0px 0px 5px ;
+    background: rgb(0, 255, 0);
+}
+
+section > div.footer{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    position: relative;
+    bottom: 0px;
+
+}
+
+div.footer > button{
+    width: max-content;
+    height: 30px;
+    border-radius: 5px;
+    border: 0;
+    background: rgb(217, 255, 0);
+    filter: invert();
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    font-weight: bolder;
+}
