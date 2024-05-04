@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+
+*{
+    font-family: "Inter", sans-serif;
+}
 html,boy{
     width: 99%;
     height: 100%;
@@ -155,3 +161,71 @@ div.footer > button{
     text-align: center;
     font-weight: bolder;
 }
+
+/*Notificações*/
+div.notification{
+    font-size: 10px;
+    width: max-content;
+    position: absolute;
+    bottom: 50px;
+    right: 20px;
+    z-index: 1000;
+    padding: 20px 15px;
+    border-radius: 10px;
+    background-color: white;
+    border: 2px solid var(--cor1);
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.553);
+    transform: translateY(30px);
+    opacity: 0;
+    visibility: hidden;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    animation: aparecer 3s linear forwards;
+    display: flex;
+  }
+  
+  div.notification > p{
+    font-size: 20px;
+    font-weight: bolder;
+    padding: 0px 20px;
+    height: 10px;
+  
+  }
+  
+  div.notification > img{
+    width: 20px;
+    height: 20px;
+  
+  }
+  
+  div > span.notification-progress{
+    position: absolute;
+    left: 5px;
+    bottom: 0px;
+    width: 0%;
+    height: 5px;
+    transform: scaleX(1);
+    background: linear-gradient(-45deg, #4B84E5,#55A6DD, #54A4DD, #5BBCD7, #64DCCF);
+    border-radius: inherit;
+    z-index: 1;
+    animation: carregar 2s 0.25s linear forwards;
+  }
+  
+  @keyframes aparecer {
+    5%{
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+    90%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+  }
+  @keyframes carregar {
+    to{
+        width: calc(100% - 10px);
+    }
+  }
+  /*FIm notificações*/

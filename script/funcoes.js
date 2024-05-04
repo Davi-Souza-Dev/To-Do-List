@@ -1,10 +1,16 @@
 const btnAdd = document.getElementById('btnAdd');
+const notification = document.getElementById('aviso');
+const notificationTxt = document.getElementById('notification-txt');
+notification.style.display = 'flex';
+notificationTxt.innerText = "Bem-Vindo(a)!..."
+
 let Ilist = [];
 let cont=0;
 function add(){
     const txt = document.getElementById('txtTask');
     if(txt.value == ''){
-        alert('Escreva uma tarefa');
+        notification.style.display = 'flex';
+        notificationTxt.innerText = "Escreva uma tarefa!..."
     }else{
         Ilist.push({
            task: txt.value,
@@ -12,6 +18,7 @@ function add(){
         });
         criarTask();
         txt.value = '';
+        notification.style.display = 'none';
     }
 }
 
