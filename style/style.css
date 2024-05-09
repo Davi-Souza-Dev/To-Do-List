@@ -107,8 +107,13 @@ li.task > p{
     line-height: 50px;
 }
 
+li.task:hover{  
+    border: 3px solid #64DCCF;
+    transition: 0.2s;
+}
+
 li.task:hover > button{
-    display: block;
+    display: none;
 }
 li.task > button{
     width: 50px;
@@ -120,7 +125,7 @@ li.task > button{
     filter: invert();
     border: 0;
     border-radius: 0px 5px 5px 0px;
-    display: none;
+    display: block;
 }
 
 .done{
