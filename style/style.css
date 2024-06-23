@@ -3,7 +3,9 @@
 
 *{
     font-family: "Inter", sans-serif;
+    box-sizing: border-box;
 }
+
 html,boy{
     width: 99%;
     height: 100%;
@@ -29,6 +31,7 @@ body{
         background-position: 0% 50%;
     }
 }
+
 section{
     width: 300px;
     background-color: rgb(255, 255, 255);
@@ -97,6 +100,11 @@ section > ul.container-task > li.task{
     flex-wrap: nowrap;
     background-color: #F2F2F2;
     border-radius: 5px;
+    overflow: hidden;
+}
+
+li.task::-webkit-scrollbar{
+    display: none;
 }
   
 
@@ -112,9 +120,6 @@ li.task:hover{
     transition: 0.2s;
 }
 
-li.task:hover > button{
-    display: none;
-}
 li.task > button{
     width: 50px;
     height: 50px;
@@ -126,6 +131,7 @@ li.task > button{
     border: 0;
     border-radius: 0px 5px 5px 0px;
     display: block;
+    z-index: 1;
 }
 
 .done{
